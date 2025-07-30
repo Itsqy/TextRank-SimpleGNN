@@ -1,6 +1,6 @@
-# TextRank + GNN Text Summarization
+# TextRank + SimpleGNN Text Summarization
 
-This project implements a hybrid approach combining TextRank algorithm with Graph Neural Networks (GNN) for Indonesian text summarization using the Liputan6 dataset.
+This is an automatic summarizer that uses a combination of TextRank and Simple Graph Neural Network with only two layers, using TF-IDF vectors to compute cosine similarity between text.
 
 ## 🎯 Overview
 
@@ -20,7 +20,12 @@ The system works by:
 ├── setup.py              # Setup script
 ├── requirements.txt      # Python dependencies
 ├── README.md            # This file
-└── liputan6_data/       # Dataset folder
+├── compare_one_article.py # Compare TextRank vs GNN for single article
+├── textrank_only/        # TextRank-only implementation
+├── adjacency_matrix_table_simple.py # Adjacency matrix explanation
+├── simple_gnn_calculation_example.py # GNN calculation example
+├── create_pdf_report.py  # Generate PDF reports
+└── liputan6_data/       # Dataset folder (not included in git)
     └── canonical/
         └── train/       # Training articles (JSON files)
 ```
@@ -43,6 +48,12 @@ This will:
 
 ```bash
 python gnn.py
+```
+
+### 3. Test Single Article
+
+```bash
+python compare_one_article.py
 ```
 
 ## 📊 Output Files
@@ -166,4 +177,4 @@ This project is for educational and research purposes.
 
 - Liputan6 dataset for Indonesian text summarization
 - TextRank algorithm by Mihalcea and Tarau
-- PyTorch Geometric for GNN implementations 
+- PyTorch Geometric for GNN implementations
